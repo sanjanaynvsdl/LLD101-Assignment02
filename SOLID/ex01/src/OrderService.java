@@ -1,17 +1,23 @@
 package src;
 
-import src.WhatsAppClient;
+
 
 public class OrderService {
-    double taxRate = 0.18;
-    ICustomerInvoice email = new WhatsAppClient();
+    ICustomerInvoice notifyCustomerRepo;
 
-    double totalWithTax(double subtotal) {
-        return subtotal + subtotal * taxRate;
+    OrderService(ICustomerInvoice notifyCustomerRepo) {
+        this.notifyCustomerRepo= notifyCustomerRepo;
     }
+    
+    // ICustomerInvoice email = new WhatsAppClient();
+    TaxCalculation tax= new TaxCalculation();
+
+    
     void checkout(String customerEmail, double subtotal) {
-        double total = totalWithTax(subtotal);
-        email.send(customerEmail, "Thanks! Your total is " + total);
+
+
+       double totalWithTax=tax.getTotalWithTax(subtotal);
+        notifyCustomerRepo.send(customerEmail, "Thanks! Your total is " + totalWithTax);
         System.out.println("Order stored (pretend DB).");
     }
 }
