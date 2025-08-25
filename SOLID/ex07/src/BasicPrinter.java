@@ -1,5 +1,8 @@
-public class BasicPrinter implements Machine {
+package src;
+
+public class BasicPrinter implements Printaable {
     public void print(String text){ System.out.println("Print: "+text); }
-    public void scan(String dstPath){ throw new UnsupportedOperationException(); }
-    public void fax(String number){ throw new UnsupportedOperationException(); }
+    // public void scan(String dstPath){ throw new UnsupportedOperationException(); }
+    // public void fax(String number){ throw new UnsupportedOperationException(); }
 }
+                          
