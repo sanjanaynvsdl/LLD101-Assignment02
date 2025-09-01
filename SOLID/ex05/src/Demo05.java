@@ -1,7 +1,5 @@
 package src;
 
-
-
 public class Demo05 {
     static int areaAfterResize(Rectangle r) {
         r.setWidth(5);

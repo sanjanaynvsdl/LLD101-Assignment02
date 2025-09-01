@@ -14,5 +14,4 @@ public class OverNightShipping extends Shipment {
         System.out.println("Total is : " + total);
         return total;
     }
-
 }
