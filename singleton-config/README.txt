@@ -19,3 +19,12 @@ Build/Run (Starter)
   java com.example.config.App
 
 
+
+
+
+
+  ---------------- use case of the reflection
+  - for testing
+  - throgugh relefcetion in java we can access the private attributes and private methods
+
+

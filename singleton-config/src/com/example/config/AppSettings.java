@@ -12,12 +12,13 @@ import java.util.Properties;
  */
 public class AppSettings implements Serializable {
     private final Properties props = new Properties();
-    static boolean isInstnance; //used to handle reflextion
+    // static boolean isInstnance; //used to handle reflextion
     private AppSettings() { 
-        if(isInstnance) {
-            throw new RuntimeException("Instance already exsist!");
+
+        if(AppSettingsTemp.appsettings!=null) {
+            throw new IllegalAccessError();
+
         }
-        isInstnance = true;
     }
 
     public static AppSettings getInstance() {
