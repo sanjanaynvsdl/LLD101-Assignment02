@@ -26,5 +26,8 @@ Build/Run (Starter)
   ---------------- use case of the reflection
   - for testing
   - throgugh relefcetion in java we can access the private attributes and private methods
+  - deserialization - understand it, 
+  - explore why the inner class is thread-safe, see what is the real cause, 
+  - someone told it's becuase the inner class is static
 
 
