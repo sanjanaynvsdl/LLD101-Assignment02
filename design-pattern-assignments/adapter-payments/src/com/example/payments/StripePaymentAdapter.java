@@ -12,6 +12,7 @@ public class StripePaymentAdapter implements PaymentGateway{
 
     @Override
     public String charge(String customerId, int amountCents) {
+        Objects.requireNonNull(customerId,"Invalid id");
         return stripeClient.makePayment(customerId, amountCents);
     }
     

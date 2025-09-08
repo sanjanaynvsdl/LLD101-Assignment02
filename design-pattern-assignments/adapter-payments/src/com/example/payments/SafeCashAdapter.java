@@ -14,8 +14,8 @@ public class SafeCashAdapter implements PaymentGateway{
 
     @Override
     public String charge(String customerId, int amountCents) {
+        Objects.requireNonNull(customerId,"Invalid id");
         //createPayment(amount, user) -> method signature, 
-
          SafeCashPayment sfPayment = safeCash.createPayment( amountCents,customerId);
          return sfPayment.confirm();
     }

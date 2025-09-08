@@ -12,6 +12,7 @@ public class FastPayAdapter implements PaymentGateway {
 
     @Override
     public String charge(String customerId, int amountCents) {
+        Objects.requireNonNull(customerId,"Invalid id");
         return fastPayClient.payNow(customerId, amountCents);
     }
 
