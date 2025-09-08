@@ -1,0 +1,13 @@
+id,email,displayName
+1,john.doe@example.com,John Doe
+2,jane.smith@company.org,Jane Smith
+,missing.id@example.com,Missing ID User
+3,,No Email User
+4,invalid-email-format,Invalid Email
+5,johnson@domain,Alice Johnson
+6,bob.williams@test.net,Bob Williams
+,another.missing@example.com,Another Missing ID
+7,charlie.brown@organization.edu,Charlie Brown
+8,not-an-email,Bad Email Format
+9,diana.prince@justice.com,Diana Prince
+10,clark.kent@daily.planet,Clark Kent
