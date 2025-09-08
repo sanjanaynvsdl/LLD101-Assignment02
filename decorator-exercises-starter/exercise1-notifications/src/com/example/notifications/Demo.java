@@ -29,5 +29,10 @@ public class Demo {
         //
         // Notifier full = new SlackDecorator(new WhatsAppDecorator(base, "user_wa"), "deployments");
         // full.notify("Deployment completed 🚀");
+
+
+        Notifier notifier = new EmailNotifier("sanju@gmail.com");
+                notifier = new SMSDecorator(notifier,98867);
+
     }
 }
