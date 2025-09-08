@@ -11,9 +11,9 @@ public class ReportBundleFacade {
     private final AuditLog log;
 
     public ReportBundleFacade() {
-        jw = new JsonWriter();
-        z = new Zipper();
-        log = new AuditLog();
+        this.jw = new JsonWriter();
+        this.z = new Zipper();
+        this.log = new AuditLog();
 
     }
 
