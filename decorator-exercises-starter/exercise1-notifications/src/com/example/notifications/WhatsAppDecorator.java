@@ -1,21 +1,19 @@
 package com.example.notifications;
 
-public class WhatsAppDecorator extends EmailNotifier  {
+public class WhatsAppDecorator extends NotifierDecorator {
 
-    NotifierDecorator notifierDecorator;
     private int num;
 
-    public WhatsAppDecorator(NotifierDecorator notifierDecorator, int num) {
-        this.emailNotifier=notifierDecorator;
-        this.num=num;
+    public WhatsAppDecorator(Notifier notifier, int num) {
+       super(notifier);
+        this.num = num;
     }
 
-
-    @Override 
+    @Override
     public void notify(String text) {
-        this.notifierDecorator.notify(text);
-        System.out.println("[WHATSAPP] Notification Sent to "+num+ "with text "+text);
+        super.notifier.notify(text);
+        System.out.println("[WHATSAPP] Notification Sent to " + num + "with text " + text);
 
     }
-    
+
 }

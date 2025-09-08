@@ -1,10 +1,16 @@
 package com.example.notifications;
 
-public abstract class NotifierDecorator implements Notifier{
+public class NotifierDecorator implements Notifier {
+
+    protected Notifier notifier;
+
+    public NotifierDecorator(Notifier notifier) {
+        this.notifier = notifier;
+    }
 
     @Override
-    public abstract void notify(String text);
+    public void notify(String text) {
+        this.notifier.notify(text);
+    }
 
-
-    
 }
